@@ -317,7 +317,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{AppURL}}/api/Customers/FindByDocumentNumber?DocumentNumber=18181819",
+							"raw": "{{AppURL}}/api/Customers/FindByDocumentNumber?DocumentNumber=77777777",
 							"host": [
 								"{{AppURL}}"
 							],
@@ -329,7 +329,7 @@
 							"query": [
 								{
 									"key": "DocumentNumber",
-									"value": "18181819"
+									"value": "77777777"
 								}
 							]
 						}
@@ -348,7 +348,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{AppURL}}/api/Customers/LikeSearchByNameAndDocumentNumber?Name=castillo&page=15",
+							"raw": "{{AppURL}}/api/Customers/LikeSearchByNameAndDocumentNumber?DocumentNumber=77777777&page=0",
 							"host": [
 								"{{AppURL}}"
 							],
@@ -359,12 +359,12 @@
 							],
 							"query": [
 								{
-									"key": "Name",
-									"value": "castillo"
+									"key": "DocumentNumber",
+									"value": "77777777"
 								},
 								{
 									"key": "page",
-									"value": "15"
+									"value": "0"
 								}
 							]
 						}
@@ -405,14 +405,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{AppURL}}/api/Customers/150",
+							"raw": "{{AppURL}}/api/Customers/515",
 							"host": [
 								"{{AppURL}}"
 							],
 							"path": [
 								"api",
 								"Customers",
-								"150"
+								"515"
 							]
 						}
 					},
@@ -462,7 +462,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"Name\": \"José Luis\",\r\n  \"Last_Name1\": \"Lopez\",\r\n  \"Last_Name2\": \"Torres\",\r\n  \"Address\": \"Grau 12323\",\r\n  \"Telephone\": \"46565\",\r\n  \"Email\": \"jlopezt@gmail.com\",\r\n  \"Document_Number\": \"23232316\",\r\n  \"Status\": 1,\r\n  \"FirebaseClientKey\": \"eQ3Rtc88CbI:APA91bGeCNyPNhp7I3oQ6oFfIGzdNSjfY6oDtQ4fvKAjH6ubOf8k-Ix_oAh_AGTzGUO_7cqjgdJh8eDH7pJgQlDo0tei5i1lHq49D9F8TG2Is2bHwEjV_GKtZXcwr45cP_idopomzjix\"\r\n}\r\n"
+							"raw": "{\r\n  \"Name\": \"José Luis\",\r\n  \"Last_Name1\": \"Lopez\",\r\n  \"Last_Name2\": \"Torres\",\r\n  \"Address\": \"Grau 12323\",\r\n  \"Telephone\": \"46565\",\r\n  \"Email\": \"jlopezt@gmail.com\",\r\n  \"Document_Number\": \"23232317\",\r\n  \"Status\": 1,\r\n  \"FirebaseClientKey\": \"eQ3Rtc88CbI:APA91bGeCNyPNhp7I3oQ6oFfIGzdNSjfY6oDtQ4fvKAjH6ubOf8k-Ix_oAh_AGTzGUO_7cqjgdJh8eDH7pJgQlDo0tei5i1lHq49D9F8TG2Is2bHwEjV_GKtZXcwr45cP_idopomzjix\"\r\n}\r\n"
 						},
 						"url": {
 							"raw": "{{AppURL}}/api/Customers",
@@ -491,17 +491,17 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\":413,\n    \"name\": \"José Luis\",\n    \"last_Name1\": \"Tirado\",\n    \"last_Name2\": \"Castillo\",\n    \"address\": \"Jose Marti 187\",\n    \"telephone\": \"784578\",\n    \"email\": \"mtirado@gmail.com\",\n    \"document_Number\": 18181819,\n    \"status\": 1\n}"
+							"raw": "{\n    \"id\":515,\n    \"name\": \"José Luis\",\n    \"last_Name1\": \"Lopez\",\n    \"last_Name2\": \"Torres\",\n    \"address\": \"Jose Marti 187\",\n    \"telephone\": \"784578\",\n    \"email\": \"mtirado@gmail.com\",\n    \"document_Number\": 23232316,\n    \"status\": 1\n}"
 						},
 						"url": {
-							"raw": "{{AppURL}}/api/Customers/413",
+							"raw": "{{AppURL}}/api/Customers/515",
 							"host": [
 								"{{AppURL}}"
 							],
 							"path": [
 								"api",
 								"Customers",
-								"413"
+								"515"
 							]
 						}
 					},
@@ -771,7 +771,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiSmhvbmF0YW4uVGlyYWRvMSIsIm5iZiI6IjE1NjEwOTcyODIiLCJleHAiOiIxNTYxMTgzNjgyIn0.EJgIsTr_jl7x8rq7s6BlstyTmgq9-57XA8XKklNlPEk",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiSmhvbmF0YW4uVGlyYWRvMSIsIm5iZiI6IjE1NjE5NTYzODciLCJleHAiOiIxNTYyMDQyNzg3In0.V4YRqGUH3G_gB-jzpg1XpvBpnsmoKwIjUX0TOu3PZ0Y",
 				"type": "string"
 			}
 		]
