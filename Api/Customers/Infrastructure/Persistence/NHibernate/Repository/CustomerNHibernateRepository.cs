@@ -150,5 +150,46 @@ namespace InkaPharmacy.Api.Customers.Infrastructure.Persistence.NHibernate.Repos
             }
             return totalRecords;
         }
+
+
+        public Customer GetUniqueCustomer(Specification<Customer> specification)
+        {
+            Customer customer = new Customer();
+            bool uowStatus = false;
+            try
+            {
+                uowStatus = _unitOfWork.BeginTransaction();
+                customer = _unitOfWork.GetSession().Query<Customer>()
+                .Where(specification.ToExpression()).FirstOrDefault();
+                _unitOfWork.Commit(uowStatus);
+            }
+            catch (Exception ex)
+            {
+                _unitOfWork.Rollback(uowStatus);
+                throw ex;
+            }
+            return customer;
+        }
+
+        public Customer GetUniqueCustomerForUpdate(Specification<Customer> specification)
+        {
+            Customer customer = new Customer();
+            bool uowStatus = false;
+            try
+            {
+                uowStatus = _unitOfWork.BeginTransaction();
+                customer = _unitOfWork.GetSession().Query<Customer>()
+                .Where(specification.ToExpression()).FirstOrDefault();
+                _unitOfWork.Commit(uowStatus);
+            }
+            catch (Exception ex)
+            {
+                _unitOfWork.Rollback(uowStatus);
+                throw ex;
+            }
+            return customer;
+        }
+
+
     }
 }
