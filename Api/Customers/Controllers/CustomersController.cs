@@ -138,6 +138,15 @@ namespace InkaPharmacy.Api.Customers.Controllers
                     return BadRequest(responseHandler.getAppCustomErrorResponse(notification.ErrorMessage()));
                 }
 
+                Specification<Customer> specification = GetUniqueCustomer(customer.Document_Number);
+                var uniqueCustomer = _customerRepository.GetUniqueCustomer(specification);
+
+                if (uniqueCustomer != null)
+                {
+                    notification.AddError("Customer already registered");
+                    return BadRequest(responseHandler.getAppCustomErrorResponse(notification.ErrorMessage()));
+                }
+
                 customer.Status = 1;
                 _customerRepository.Create(customer);
                 _unitOfWork.Commit(uowStatus);
@@ -187,6 +196,15 @@ namespace InkaPharmacy.Api.Customers.Controllers
 
                 if (notification.HasErrors())
                 {
+                    return BadRequest(responseHandler.getAppCustomErrorResponse(notification.ErrorMessage()));
+                }
+
+                Specification<Customer> specification = GetUniqueCustomerForUpdate(customer.Document_Number, customer.Id);
+                var uniqueCustomer = _customerRepository.GetUniqueCustomer(specification);
+
+                if (uniqueCustomer != null)
+                {
+                    notification.AddError("Other customer already have the same Document Number");
                     return BadRequest(responseHandler.getAppCustomErrorResponse(notification.ErrorMessage()));
                 }
 
@@ -324,6 +342,30 @@ namespace InkaPharmacy.Api.Customers.Controllers
                     specification = specification.And(new LikeSearchByDocumentNumberSpecification(DocumentNumber));
                 }
 
+            }
+
+            return specification;
+        }
+
+        private Specification<Customer> GetUniqueCustomer(string DocumentNumber)
+        {
+            Specification<Customer> specification = Specification<Customer>.All;
+
+            if (!string.IsNullOrEmpty(DocumentNumber))
+            {
+                specification = specification.And(new GetUniqueCustomer(DocumentNumber));
+            }
+
+            return specification;
+        }
+
+        private Specification<Customer> GetUniqueCustomerForUpdate(string DocumentNumber, long Id)
+        {
+            Specification<Customer> specification = Specification<Customer>.All;
+
+            if (!string.IsNullOrEmpty(DocumentNumber))
+            {
+                specification = specification.And(new GetUniqueCustomerForUpdate(DocumentNumber, Id));
             }
 
             return specification;
