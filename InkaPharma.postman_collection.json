@@ -317,7 +317,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{AppURL}}/api/Customers/FindByDocumentNumber?DocumentNumber=77777777",
+							"raw": "{{AppURL}}/api/Customers/FindByDocumentNumber?DocumentNumber=42541401",
 							"host": [
 								"{{AppURL}}"
 							],
@@ -329,7 +329,7 @@
 							"query": [
 								{
 									"key": "DocumentNumber",
-									"value": "77777777"
+									"value": "42541401"
 								}
 							]
 						}
@@ -462,7 +462,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"Name\": \"José Luis\",\r\n  \"Last_Name1\": \"Lopez\",\r\n  \"Last_Name2\": \"Torres\",\r\n  \"Address\": \"Grau 12323\",\r\n  \"Telephone\": \"46565\",\r\n  \"Email\": \"jlopezt@gmail.com\",\r\n  \"Document_Number\": \"23232317\",\r\n  \"Status\": 1,\r\n  \"FirebaseClientKey\": \"eQ3Rtc88CbI:APA91bGeCNyPNhp7I3oQ6oFfIGzdNSjfY6oDtQ4fvKAjH6ubOf8k-Ix_oAh_AGTzGUO_7cqjgdJh8eDH7pJgQlDo0tei5i1lHq49D9F8TG2Is2bHwEjV_GKtZXcwr45cP_idopomzjix\"\r\n}\r\n"
+							"raw": "{\r\n  \"Name\": \"José Luis\",\r\n  \"Last_Name1\": \"Lopez\",\r\n  \"Last_Name2\": \"Torres\",\r\n  \"Address\": \"Grau 12323\",\r\n  \"Telephone\": \"46565\",\r\n  \"Email\": \"jlopezt@gmail.com\",\r\n  \"Document_Number\": \"23232318\",\r\n  \"Status\": 1,\r\n  \"FirebaseClientKey\": \"eQ3Rtc88CbI:APA91bGeCNyPNhp7I3oQ6oFfIGzdNSjfY6oDtQ4fvKAjH6ubOf8k-Ix_oAh_AGTzGUO_7cqjgdJh8eDH7pJgQlDo0tei5i1lHq49D9F8TG2Is2bHwEjV_GKtZXcwr45cP_idopomzjix\"\r\n}\r\n"
 						},
 						"url": {
 							"raw": "{{AppURL}}/api/Customers",
@@ -491,7 +491,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"id\":515,\n    \"name\": \"José Luis\",\n    \"last_Name1\": \"Lopez\",\n    \"last_Name2\": \"Torres\",\n    \"address\": \"Jose Marti 187\",\n    \"telephone\": \"784578\",\n    \"email\": \"mtirado@gmail.com\",\n    \"document_Number\": 23232316,\n    \"status\": 1\n}"
+							"raw": "{\n    \"id\":515,\n    \"name\": \"José Luis\",\n    \"last_Name1\": \"Lopez\",\n    \"last_Name2\": \"Torres\",\n    \"address\": \"Jose Marti 187\",\n    \"telephone\": \"784578\",\n    \"email\": \"jlopezti@gmail.com\",\n    \"document_Number\": 23232318,\n    \"status\": 1\n}"
 						},
 						"url": {
 							"raw": "{{AppURL}}/api/Customers/515",
@@ -735,7 +735,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "key=AAAA_3pLCcQ:APA91bGO1yeIKbMNzuMtjOMP1TOjDLsqTpJm-aDBhH0HAsz0ZpNv-VDPDTcFisfIzHRu1n6Z5_eXEoFg583SfuMksOumrjO7RbH8sQ8CO5SxggZeu1BdbANEuS8rFsb3lzWGuMN3J4kM",
+						"value": "key=AIzaSyA9SaaRrjBBCr3Xn5y4bxHXvtU-NOVDUhI",
 						"type": "text"
 					},
 					{
@@ -747,7 +747,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"notification\": {\n        \"title\": \"InkaPharmacy Notification\",\n        \"body\": \"Product 423423 updated!\",\n        \"icon\": \"https://s3.us-east-2.amazonaws.com/kipubit/logo_unmsm.png\"\n    },\n    \"to\": \"eQ3Rtc88CbI:APA91bGeCNyPNhp7I3oQ6oFfIGzdNSjfY6oDtQ4fvKAjH6ubOf8k-Ix_oAh_AGTzGUO_7cqjgdJh8eDH7pJgQlDo0tei5i1lHq49D9F8TG2Is2bHwEjV_GKtZXcwr45cP_idopomzjix\"\n}"
+					"raw": "{\n    \"notification\": {\n        \"title\": \"InkaPharmacy Notification\",\n        \"body\": \"Product 423423 updated!\",\n        \"icon\": \"https://s3.us-east-2.amazonaws.com/kipubit/logo_unmsm.png\"\n    },\n    \"to\": \"fO5YEGZQLvk:APA91bFoh4s7-6fM5Xv50jTJyeHT7InVHVG_meKg3ABotkMfZBpSZg-tme5R0O2abKEzxr15LMiprR5ayM-ktlbU6egdftSgPBj1TqM6veosJnnJd1G-BiZ0nQlkvIfc4fep4UzghQH7\"\n}"
 				},
 				"url": {
 					"raw": "https://fcm.googleapis.com/fcm/send",
@@ -771,7 +771,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiSmhvbmF0YW4uVGlyYWRvMSIsIm5iZiI6IjE1NjE5NTYzODciLCJleHAiOiIxNTYyMDQyNzg3In0.V4YRqGUH3G_gB-jzpg1XpvBpnsmoKwIjUX0TOu3PZ0Y",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiSmhvbmF0YW4uVGlyYWRvMSIsIm5iZiI6IjE1NzQ5MTg3MDkiLCJleHAiOiIxNTc1MDA1MTA5In0.IQG0vdfmTTPFxGoJWOdT0Mf7vqf5SPqjQknVRoAlBeE",
 				"type": "string"
 			}
 		]
