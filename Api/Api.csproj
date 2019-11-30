@@ -8,12 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Migrations\MySQL\15_Product_ImageUrl.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Include="Migrations\MySQL\1_Category.sql" />
     <EmbeddedResource Include="Migrations\MySQL\2_Currency.sql" />
 	  <EmbeddedResource Include="Migrations\MySQL\5_RoleTable.sql" />
 	  <EmbeddedResource Include="Migrations\MySQL\6_StoreTable.sql" />
     <EmbeddedResource Include="Migrations\MySQL\7_CustomerTable.sql" />
 	  <EmbeddedResource Include="Migrations\MySQL\8_EmployeeTable.sql" />
+	  <EmbeddedResource Include="Migrations\MySQL\15_Product_ImageUrl.sql" />
 	  <EmbeddedResource Include="Migrations\MySQL\9_ProductTable.sql" />
     <EmbeddedResource Include="Migrations\MySQL\10_ProviderTable.sql" />
     <EmbeddedResource Include="Migrations\MySQL\11_Purchase_OrderTable.sql" />

@@ -24,6 +24,7 @@ namespace InkaPharmacy.Api.Customers.Infrastructure.Persistence.NHibernate.Mappi
             Map(x => x.Expiration_date).Column("Expiration_date");
             Map(x => x.Status).Column("Status");
             Map(x => x.Stock_status).Column("Stock_status");
+            Map(x => x.ImageUrl).Column("image_url").Nullable();
         }
     }
 }

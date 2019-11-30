@@ -18,6 +18,8 @@ namespace InkaPharmacy.Api.Product
         public virtual int Status { get; set; }
         public virtual int Stock_status { get; set; }
 
+        public virtual string ImageUrl { get; set; }
+
         public Product()
         {
         }

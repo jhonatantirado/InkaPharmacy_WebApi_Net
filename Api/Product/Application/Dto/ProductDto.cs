@@ -19,6 +19,7 @@ namespace InkaPharmacy.Api.Product.Application.Dto
         public int Status { get; set; }
         public int Stock_status { get; set; }
         public string FirebaseClientKey { get; set; }
+        public string ImageUrl { get; set; }
 
     }
 }
