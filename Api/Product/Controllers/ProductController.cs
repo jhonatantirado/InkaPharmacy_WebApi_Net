@@ -13,7 +13,7 @@ using InkaPharmacy.Api.Common.Application.Dto;
 
 namespace InkaPharmacy.Api.Product.Controllers
 {
-    [Authorize]
+   
     [Route("api/Products")]
     [ApiController]
     public class ProductController : ControllerBase
@@ -186,6 +186,7 @@ namespace InkaPharmacy.Api.Product.Controllers
             }
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Create([FromBody] ProductDto ProductDto)
         {
@@ -225,6 +226,7 @@ namespace InkaPharmacy.Api.Product.Controllers
             }
         }
 
+        [Authorize]
         [HttpPut("{ProductId}")]
         public IActionResult Update(int ProductId, [FromBody] ProductDto ProductDto)
         {
@@ -267,6 +269,7 @@ namespace InkaPharmacy.Api.Product.Controllers
             }
         }
 
+        [Authorize]
         [HttpDelete("{ProductId}")]
         public IActionResult Delete(int ProductId)
         {
